@@ -1,5 +1,5 @@
 #
-# Copyright 2018 The StatsLabs Authors.
+# Copyright 2018 The Statslabs Authors.
 #
 get_filename_component(Rmath_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 include(CMakeFindDependencyMacro)

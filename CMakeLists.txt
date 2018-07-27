@@ -1,7 +1,7 @@
 #
-# Copyright 2018 The StatsLabs Authors.
+# Copyright 2018 The Statslabs Authors.
 #
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.5)
 project(rmath VERSION 1.0.0 LANGUAGES C)
 
 ##################################################
@@ -72,7 +72,7 @@ install(TARGETS rmath
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
         )
 
-#This is required so that the exported target has the name Matrix and not matrix
+#This is required so that the exported target has the name Rmath and not rmath
 set_target_properties(rmath PROPERTIES EXPORT_NAME Rmath)
 
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
@@ -80,7 +80,7 @@ install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 # Export the targets to a script
 install(EXPORT rmath-targets
         FILE
-        MatrixTargets.cmake
+        RmathTargets.cmake
         NAMESPACE
         Rmath::
         DESTINATION
