@@ -1,7 +1,7 @@
 #
 # Copyright 2018 The Statslabs Authors.
 #
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0)
 project(rmath VERSION 1.0.0 LANGUAGES C)
 
 ##################################################
@@ -44,6 +44,8 @@ add_library(rmath
         src/toms708.c src/wilcox.c
         src/signrank.c)
 
+target_link_libraries(rmath m)
+
 # Add an alias so that library can be used inside the build tree, e.g. when testing
 add_library(Rmath::rmath ALIAS rmath)
 
@@ -56,8 +58,7 @@ target_include_directories(rmath
         ${CMAKE_CURRENT_SOURCE_DIR}/src
         )
 
-target_compile_definitions(rmath INTERFACE MATHLIB_STANDALONE)
-target_compile_definitions(rmath PRIVATE MATHLIB_STANDALONE)
+target_compile_definitions(rmath PUBLIC MATHLIB_STANDALONE)
 
 ##################################################
 # Installation instructions
