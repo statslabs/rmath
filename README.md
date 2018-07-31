@@ -72,17 +72,17 @@ To make the project simple enough, we will create a CMake project for `demo.c`.
    ```sh
    ./example
    ```
-   
-A quick check on whether the program works:
-```
-Enter first shape parameter: 1.5
-Enter second shape parameter: 0.3
-Enter probability level: .10
-Critical value is 0.478398
-```
 
-This corresponds to the following call in R:
-```r
-> qbeta(.10,1.5,.3)
-[1] 0.4783981
-```
+   A quick check on whether the program works:
+   ```
+   Enter first shape parameter: 1.5
+   Enter second shape parameter: 0.3
+   Enter probability level: .10
+   Critical value is 0.478398
+   ```
+
+   This corresponds to the following call in R:
+   ```r
+   > qbeta(.10,1.5,.3)
+   [1] 0.4783981
+   ```
