@@ -44,7 +44,7 @@ add_library(rmath
         src/pnf.c src/pnt.c src/qnf.c src/qnt.c
         src/ptukey.c src/qtukey.c
         src/toms708.c src/wilcox.c
-        src/signrank.c)
+        src/signrank.c src/sunif.c)
 
 target_link_libraries(rmath m)
 
